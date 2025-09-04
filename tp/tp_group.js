@@ -36,7 +36,6 @@ teamData.forEach(user => {
             let img = document.createElement('img');
             img.classList.add("p-4")
             img.src = user[key];
-
             card.append(img);
         }
     }
