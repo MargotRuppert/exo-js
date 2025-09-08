@@ -17,8 +17,16 @@
 // document.getElementById("copyright").innerText =  `Copyright © ${date} - Tous droits réservés par ${nameOfSite}`
 
 import { renderTimeline } from './services/timelineService.js';
+import { chuckNorris } from './services/welcomeService.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
     renderTimeline("#timeline");
   });
+
+
+let h1 = document.getElementById("chuckNorris");
+
+if (window.location.pathname == "/" || "/index.html"){
+  h1.innerText = await chuckNorris();
+}
